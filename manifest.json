@@ -1,0 +1,24 @@
+{
+  "name": "LM Studio Assistant",
+  "description": "LM Studio Assistant is a powerful browser extension designed to enhance your text analysis, code review, translation, and other language processing tasks. This tool leverages the capabilities of LM Studio models for local processing, ensuring maximum privacy and security.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://localhost:1234/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png"
+  },
+  "developer": {
+    "name": "Microup",
+    "url": "https://github.com/microup/LM-Studio-Assistant"
+  },
+  "homepage_url": "https://github.com/microup/LM-Studio-Assistant"
+}
