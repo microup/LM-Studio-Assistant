@@ -1,6 +1,6 @@
 # LM Studio Assistant
 
-LM Studio Assistant is a powerful browser extension designed to enhance your text analysis, code review, translation, and other language processing tasks. This tool leverages the capabilities of LM Studio models for local processing, ensuring maximum privacy and security.
+LM Studio Assistant is a powerful web extension for Chrome and Edge designed to enhance your text analysis, code review, translation, and other language processing tasks. This tool leverages the capabilities of LM Studio models for local processing, ensuring maximum privacy and security.
 
 <p align="center">
   <img src="main.png" alt="LM Studio Assistant">
@@ -27,14 +27,14 @@ git clone https://github.com/microup/LM-Studio-Assistant.git
 ```
 
 3. Load the Extension:
-* Open Chrome and navigate to chrome://extensions/.
+* Open your browser (Chrome or Edge) and navigate to `chrome://extensions/` (or `edge://extensions/` for Edge)
 * Enable "Developer mode" using the toggle in the top right.
 * Click on "Load unpacked" and select the cloned repository directory.
 *Start LM Studio: Ensure that LM Studio is running locally on your machine, as it provides the necessary models for analysis.
 
 ## Usage
 
-1. Open a Web Page: Open any web page you want to analyze in Chrome.
+1. Open a Web Page: Open any web page you want to analyze in Chrome or Edge.
 2. Select Text (Optional): You can either highlight the text you wish to analyze or leave it blank to process the entire page content.
 3. Choose Prompt Type: Select the desired prompt type from the dropdown menu. Available prompts include:
     * Text Analysis: Analyze the highlighted text, extract important points, and create an analytical summary.
