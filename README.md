@@ -33,12 +33,18 @@ git clone https://github.com/microup/LM-Studio-Assistant.git
 *Start LM Studio: Ensure that LM Studio is running locally on your machine, as it provides the necessary models for analysis.
 
 ## Usage
-* Open a Web Page: Open any web page you want to analyze in Chrome.
-* Select Text (Optional): Highlight the text you wish to analyze or leave it blank to process the entire page content.
-Choose Prompt Type: Select the desired prompt type from the dropdown menu.
-* Specify Output Language: Choose the output language for the analysis results.
-Select LLM Model: Choose the appropriate LM Studio model from the list.
-* Click "Process Text": The extension will analyze the text using the selected model and display the results in the designated section.
+
+1. Open a Web Page: Open any web page you want to analyze in Chrome.
+2. Select Text (Optional): You can either highlight the text you wish to analyze or leave it blank to process the entire page content.
+3. Choose Prompt Type: Select the desired prompt type from the dropdown menu. Available prompts include:
+    * Text Analysis: Analyze the highlighted text, extract important points, and create an analytical summary.
+    * Translation: Translate the highlighted text into the selected language.
+    * Code Review: Review the code, identify errors, suggest optimizations, and check for adherence to coding style.
+    * Text Simplification: Simplify the text for better understanding while preserving key ideas.
+    * Grammar Correction: Correct any errors in the text while maintaining writing style.
+4. Specify Output Language: Choose the output language for the analysis results.
+5. Select LLM Model: Choose the appropriate LM Studio model from the list.
+6. Click "Process Text": The extension will analyze the text using the selected model and display the results in the designated section.
 
 ## Security
 
