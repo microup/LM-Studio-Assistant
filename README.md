@@ -1,5 +1,7 @@
 # LM Studio Assistant
 
+Link: [WEB Chrome extension](https://chromewebstore.google.com/detail/lm-studio-assistant/iefmcbandkegenedffmjefjjnccohnke)
+
 LM Studio Assistant is a powerful web extension for Chrome and Edge designed to enhance your text analysis, code review, translation, and other language processing tasks. This tool leverages the capabilities of LM Studio models for local processing, ensuring maximum privacy and security.
 
 <p align="center">
