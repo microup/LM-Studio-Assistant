@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root[data-theme="light"] {
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --section-bg: #f1f5f9;
+            --border-color: #ced4da;
+            --heading-color: #2c3e50;
+            --button-bg: #3498db;
+            --button-hover: #2980b9;
+            --select-bg: white;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --section-bg: #2d2d2d;
+            --border-color: #404040;
+            --heading-color: #ffffff;
+            --button-bg: #2980b9;
+            --button-hover: #3498db;
+            --select-bg: #2d2d2d;
+        }
+
         body {
             width: 250px;
             padding: 15px;
             font-family: 'Segoe UI', system-ui, sans-serif;
-            background: #f8f9fa;
-            color: #333;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
         }
         .section {
             margin-bottom: 15px;
@@ -17,27 +41,28 @@
             display: block;
             margin-bottom: 5px;
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--heading-color);
             font-size: 0.9em;
         }
         select {
             width: 100%;
             padding: 8px;
-            border: 1px solid #ced4da;
+            border: 1px solid var(--border-color);
             border-radius: 4px;
-            background: white;
+            background: var(--select-bg);
+            color: var(--text-color);
             font-size: 0.9em;
             margin-bottom: 8px;
             transition: border-color 0.2s;
         }
         select:focus {
-            border-color: #3498db;
+            border-color: var(--button-bg);
             outline: none;
         }
         button {
             width: 100%;
             padding: 10px;
-            background: #3498db;
+            background: var(--button-bg);
             color: white;
             border: none;
             border-radius: 4px;
@@ -48,7 +73,7 @@
             transition: background 0.2s;
         }
         button:hover {
-            background: #2980b9;
+            background: var(--button-hover);
         }
         #loading {
             display: none;
@@ -60,7 +85,7 @@
         #result {
             margin-top: 15px;
             padding: 10px;
-            background: #f1f5f9;
+            background: var(--section-bg);
             border-radius: 4px;
             font-size: 0.9em;
             line-height: 1.5;
@@ -80,6 +105,37 @@
             padding: 10px;
             border-radius: 4px;
             margin-top: 10px;
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: auto;
+            padding: 5px;
+            font-size: 1.2em;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        a {
+            color: var(--button-bg);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -106,6 +162,10 @@
         <label for="langSelect">Output Language</label>
         <select id="langSelect">
             <option value="english">English</option>
+            <option value="french">French</option>
+            <option value="spanish">Spanish</option>
+            <option value="portuguese">Portuguese</option>
+            <option value="chinese">Chinese</option>
             <option value="russian">Russian</option>
         </select>
     </div>
@@ -119,8 +179,9 @@
 
     <div id="result"></div>
 
-    <div style="text-align: center; margin-top: 15px;">
-        Powered by <a href="https://github.com/microup/LM-Studio-Assistant" target="_blank">Microup</a>
+    <div class="footer">
+        Powered by <a href="https://github.com/microup/LM-Studio-Assistant" target="_blank" rel="noopener">Microup</a>
+        <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌓</button>
     </div>
 
     <script src="popup.js"></script>
