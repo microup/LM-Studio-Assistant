@@ -2,6 +2,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const MAX_LEN_PAGE_CONTENT = 8000;
     let currentLang = "English";
 
+    // Theme management
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Load saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+        themeToggle.textContent = theme === 'light' ? '🌓' : '☀️';
+    }
+
     // Predefined prompts for different actions
     const PROMPTS = {
         default: (lang) => `Generate a response only in ${lang}. Analyze the highlighted text, extract the most important points, and create an analytical summary in the form of a prioritized list. If you are analyzing source code, specify its purpose and usage. At the very beginning, provide a detailed conclusion with an analysis of the content. Responses should be only in ${lang}.`,
@@ -13,7 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const LANG = {
         russian: 'Russian',
-        english: 'English'
+        english: 'English',
+        spanish: 'Spanish',
+        french: 'French',
+        portuguese: 'Portuguese',
+        chinese: 'Chinese'
     };
 
     const analyzeBtn = document.getElementById('analyze');
